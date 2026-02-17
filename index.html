@@ -423,8 +423,8 @@
         .machine-card {
             background: #fff;
             border: 2px solid var(--ink-primary);
-            padding: 40px;
-            margin-bottom: 30px;
+            padding: 20px 24px;
+            margin-bottom: 0;
             box-shadow: var(--shadow-hard);
             transition: transform 0.2s;
         }
@@ -435,25 +435,22 @@
             font-family: 'Eurostile', sans-serif;
             text-transform: uppercase;
             letter-spacing: var(--tracking-wide);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--accent-stack);
             border-bottom: 1px solid var(--accent-stack);
             display: inline-block;
             padding-bottom: 2px;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
         .machine-card p {
-            font-size: 1.1rem;
+            font-size: 0.85rem;
             line-height: 1.4;
         }
         .machines-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
-            margin-top: 3rem;
-        }
-        .machines-grid .machine-card {
-            margin-bottom: 0;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 1.5rem;
         }
 
         /* ── About Tab ── */
@@ -769,7 +766,7 @@
         <!-- Tab Navigation -->
         <nav class="tab-nav">
             <button class="tab-btn active" onclick="switchTab('home')">Home</button>
-            <button class="tab-btn" onclick="switchTab('machines')">Machines</button>
+            <button class="tab-btn" onclick="switchTab('machines')">Our Service</button>
             <button class="tab-btn" onclick="switchTab('about')">About</button>
             <button class="tab-btn" onclick="switchTab('support')">Support</button>
         </nav>
@@ -831,22 +828,48 @@
             </div>
         </section>
 
-        <!-- ═══ MACHINES TAB ═══ -->
-        <section id="tab-machines" class="tab-content" aria-label="Machines">
-            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 0.5rem;">
-                <span class="type-header-sans" style="margin-bottom: 0;">Our Machines</span>
-                <img src="Ricoh_logo_1986.svg" alt="Vintage Ricoh logo - Bay Area Office Systems is an authorized Ricoh copier dealer" style="height: 28px; opacity: 0.7;">
+        <!-- ═══ OUR SERVICE TAB ═══ -->
+        <section id="tab-machines" class="tab-content" aria-label="Our Service">
+            <span class="type-header-sans">Our Service</span>
+            <p style="font-size: 1.2rem; line-height: 1.5; color: var(--ink-primary); max-width: 640px; margin-top: 0.75rem;">We lease and service commercial Ricoh copiers for Bay Area businesses. Every placement includes delivery, installation, network setup, toner, and ongoing maintenance.</p>
+
+            <!-- Info sections -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-top: 2rem;">
+                <div>
+                    <h3 style="font-family: 'Eurostile', sans-serif; font-weight: 600; font-size: 1rem; margin: 0 0 0.5rem 0;">Why Ricoh</h3>
+                    <p style="font-size: 0.85rem; line-height: 1.5; color: var(--ink-secondary); opacity: 0.8;">Ricoh is one of the most trusted names in commercial printing. We've specialized in Ricoh for 30 years and never had a reason to switch.</p>
+                </div>
+                <div>
+                    <h3 style="font-family: 'Eurostile', sans-serif; font-weight: 600; font-size: 1rem; margin: 0 0 0.5rem 0;">Remanufactured</h3>
+                    <p style="font-size: 0.85rem; line-height: 1.5; color: var(--ink-secondary); opacity: 0.8;">Every machine is in great condition with low usage. We inspect, clean, and test each one before placement with fresh toner and new parts.</p>
+                </div>
+                <div>
+                    <h3 style="font-family: 'Eurostile', sans-serif; font-weight: 600; font-size: 1rem; margin: 0 0 0.5rem 0;">When Something Breaks</h3>
+                    <p style="font-size: 0.85rem; line-height: 1.5; color: var(--ink-secondary); opacity: 0.8;">Call or email us. We come to you, diagnose on-site, and fix it. Parts and labor are covered under your lease.</p>
+                </div>
             </div>
-            <div class="machines-grid">
+
+            <!-- Machine Cards -->
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 2.5rem;">
+                <span class="type-header-sans" style="margin: 0;">Common Models We Place</span>
+                <img src="Ricoh_logo_1986.svg" alt="Ricoh logo" style="height: 18px; opacity: 0.4;">
+            </div>
+            <div class="machines-grid" style="margin-top: 1rem;">
                 <div class="machine-card">
-                    <h3>Ricoh IM C4500 Series</h3>
-                    <p>High-speed commercial color copiers. Print, scan, copy, fax. Remanufactured &amp; inspected.</p>
+                    <img src="copier.png" alt="Ricoh IM C3500 commercial copier" style="width: 100%; max-height: 120px; object-fit: contain; margin-bottom: 0.5rem;">
+                    <h3>Ricoh IM C3500</h3>
+                    <p>35 ppm, color and B&amp;W. Print, scan, copy, fax. Great for small to mid-size offices.</p>
+                    <a href="https://www.ricoh.com/products/business_printers/copiers/imc3500" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--accent-stack); font-family: 'Eurostile', sans-serif; text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.1em; text-decoration: none; border-bottom: 1px solid var(--accent-stack);">Specs on Ricoh.com</a>
                 </div>
                 <div class="machine-card">
-                    <h3>Ricoh MP C4504</h3>
-                    <p>The workhorse of the modern office. Reliable, fast, and network-ready.</p>
+                    <img src="copier.png" alt="Ricoh IM C4500 commercial copier" style="width: 100%; max-height: 120px; object-fit: contain; margin-bottom: 0.5rem;">
+                    <h3>Ricoh IM C4500</h3>
+                    <p>45 ppm, color and B&amp;W. Print, scan, copy, fax. Built for busier offices with higher volume.</p>
+                    <a href="https://www.ricoh.com/products/business_printers/copiers/imc4500" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--accent-stack); font-family: 'Eurostile', sans-serif; text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.1em; text-decoration: none; border-bottom: 1px solid var(--accent-stack);">Specs on Ricoh.com</a>
                 </div>
             </div>
+
+            <a href="#" class="btn-primary" onclick="event.preventDefault(); switchTab('quote')" style="margin-top: 1.5rem;">Get a Quote</a>
         </section>
 
         <!-- ═══ ABOUT TAB ═══ -->
@@ -1051,7 +1074,8 @@
             document.querySelectorAll('.tab-btn').forEach(function(el) {
                 var text = el.textContent.toLowerCase();
                 if (tabName === 'quote' && text.includes('quote')) el.classList.add('active');
-                else if (tabName !== 'quote' && text.includes(tabName)) el.classList.add('active');
+                else if (tabName === 'machines' && text.includes('service')) el.classList.add('active');
+                else if (tabName !== 'quote' && tabName !== 'machines' && text.includes(tabName)) el.classList.add('active');
             });
             // Scroll to top
             window.scrollTo(0, 0);
